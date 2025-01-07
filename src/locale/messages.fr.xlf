@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8872079958093098526" datatype="html">
+        <source>1111</source>
+        <target>fr1111</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <note priority="1" from="description">An introduction header for t</note>
+      </trans-unit>
+      <trans-unit id="5435601117526554949" datatype="html">
+        <source>fr登入</source>
+      </trans-unit>
+      <trans-unit id="forgetPass" datatype="html">
+        <source>fr忘記密碼嗎？</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

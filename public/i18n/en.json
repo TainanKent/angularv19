@@ -1,0 +1,8 @@
+{
+  "test": "en_test",
+  "account": "account",
+  "password": "password",
+  "logout": "Logout",
+  "forgetPass": "Forgot your password?",
+  "login": "Login"
+}

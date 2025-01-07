@@ -1,0 +1,14 @@
+<div class="flex flex-col">
+  <div class="flex flex-col">
+    <span class="text-dark text-lg font-bold">{{ labelTest | translate }}</span>
+    <div class="relative max-w-full mt-1 h-[50px]">
+      <input 
+        [(type)]="type"
+        [formControl]="value"
+        class="peer absolute left-0 top-0 w-full rounded-lg font-normal outline-none transition-all placeholder:text-stone-400/80 border shadow-sm focus:ring-2 px-4 py-3 border-primary focus:border-primary focus:ring-primary/30"
+        [(placeholder)]="placeholder"
+        (keyup)="onChange($event)"
+      >
+    </div>
+  </div>
+</div>

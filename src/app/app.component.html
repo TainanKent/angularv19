@@ -1,0 +1,27 @@
+
+<main class="w-svw h-svh  p-4  md:p-10 bg-light">
+  <div class="flex" *ngIf="showTopMenu">
+    <div class="right-area w-[300px]">
+      <div class="w-full h-[90svh]">
+        <SliderComponent />
+      </div>
+    </div>
+    <div class="left-area w-full">
+      <div class="top h-[100px] flex justify-end w-full">
+        <select (change)="changeLang($event)" class="w-[100px] h-[40px] p-2 rounded-lg">
+          <option value="en">en</option>
+          <option value="tw">tw</option>
+          <option value="fr">fr</option>
+        </select>
+        <ButtonComponent name="logout" />
+      </div>
+      <div class="content">
+        <router-outlet />
+      </div>
+    </div>
+  </div>
+  <div class="h-full" *ngIf="!showTopMenu">
+    <router-outlet />
+  </div>
+  
+</main>

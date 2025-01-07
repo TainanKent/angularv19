@@ -1,0 +1,8 @@
+{
+  "test": "fr_test",
+  "account": "帳號",
+  "password": "密碼",
+  "logout": "登出",
+  "forgetPass": "忘記密碼嗎？",
+  "login": "登入"
+}

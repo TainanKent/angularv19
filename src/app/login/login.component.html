@@ -1,0 +1,39 @@
+<div class="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border-[8px] border-white bg-white/50 p-4 md:justify-start md:border-[15px] md:px-12">
+  <!-- 左上方LOGO左上方LOGO -->
+  <img
+    src="/images/logo_color.svg"
+    width="240px"
+    class="absolute left-0 top-4 w-36 md:left-4 md:top-0 md:w-60"
+  />
+  <!-- 右上方LOGO -->
+  <img 
+    src="/images/green_tech_center.svg"
+    class="absolute right-4 top-8 w-20 md:right-12 md:w-32" 
+  />
+  <img 
+    src="/images/login_background.svg"
+    class="fixed bottom-0 right-0 flex h-full w-full items-end justify-end md:max-w-[1000px] 3xl:max-w-[1300px]" 
+  />
+  <!-- 登入表單資料 -->
+  <form
+    class="font-bold flex w-96 flex-col space-y-4 rounded-2xl 
+      bg-white/40 p-4 backdrop-blur-lg md:w-[450px] md:space-y-8 md:p-12 3xl:w-[550px]" 
+    style="opacity: 1; transform: translateX(0%) translateZ(0px);"
+    [formGroup]="loginForm" 
+    (ngSubmit)="onSubmit()"
+  >
+    <!-- {{ loginForm.value | json }} -->
+    <b class="text-[2rem] text-dark">Welcome Back!</b>
+      <!-- <h1>{{ testWord }}</h1> -->
+      <InputComponent labelTest="account" placeholder="請輸入使用者帳號" formControlName="username"/>
+      <InputComponent labelTest="password" type="password" placeholder="請輸入您的密碼" formControlName="password"/>
+
+      <!-- <ButtonComponent (click)="click($event)" name="login" /> -->
+      <ButtonComponent name="login" />
+
+      <button type="button" class="text-xl mx-auto !mt-4 w-max text-center text-primary transition hover:text-dark">
+        <u class="underline-offset-4">{{ 'forgetPass' | translate }}</u>
+      </button>
+  </form>
+</div>
+
