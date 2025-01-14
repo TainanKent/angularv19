@@ -4,11 +4,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { InputModule } from '../input/input.module';
+import { InputModule } from '../../components/input/input.module';
 import {
   TranslatePipe,
 } from "@ngx-translate/core";
-import { AuthService } from '../auth.service';
+import { AuthService } from '../../auth.service';
 /**
  * 
  * 要在HTML 顯示object 需要使用JsonPipe

@@ -5,8 +5,9 @@ import {
   TranslateService,
 } from "@ngx-translate/core";
 import { Location } from '@angular/common';
-import { InputModule } from './input/input.module';
-import { SliderComponent } from './slider/slider.component'
+import { InputModule } from './components/input/input.module';
+import { SliderComponent } from './components/slider/slider.component'
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',

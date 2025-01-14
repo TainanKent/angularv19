@@ -7,6 +7,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient} from '@angular/common/http';
+import { AuthService } from './auth.service';
+import { provideAngularSvgIcon } from 'angular-svg-icon';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
     new TranslateHttpLoader(http, './i18n/', '.json');
@@ -32,6 +34,7 @@ export const appConfig: ApplicationConfig = {
         useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
-    })
+    }),
+    provideAngularSvgIcon()
   ]
 };

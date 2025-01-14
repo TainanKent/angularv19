@@ -11,11 +11,14 @@ export class AuthService {
   }
 
   checkAuthStatus() {
-    console.log('loginStatus', localStorage.getItem('loginStatus'))
-    if (localStorage.getItem('loginStatus') === 'false') {
+  
+    if (typeof window !== 'undefined') {
+      console.log('loginStatus', localStorage.getItem('loginStatus'))
+    }
+
+    if (typeof window !== 'undefined' && localStorage.getItem('loginStatus') === 'false') {
       this.router.navigate(['']);
     }
-    // return localStorage.getItem('loginStatus')
   }
 
   setAuthStatus(status: boolean) {

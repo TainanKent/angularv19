@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { TestComponent } from './test/test.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BasicComponent } from './basic/basic.component';
-
+import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { BasicComponent } from './pages/basic/basic.component';
+import { Chat2Component } from './pages/chat2/chat2.component';
+import { Chat3Component } from './pages/chat3/chat3.component';
 export const routes: Routes = [
     { path: '', component: LoginComponent },
-    { path: 'test', component: TestComponent },
     { path: 'dash', component: DashboardComponent },
     { path: 'basic', component: BasicComponent },
+    { path: 'chat2', component: Chat2Component },
+    { path: 'chat3', component: Chat3Component },
 ];

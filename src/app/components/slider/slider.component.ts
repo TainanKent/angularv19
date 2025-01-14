@@ -2,7 +2,8 @@ import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ResolveEnd, Router } from '@angular/router';
 import {Location} from '@angular/common';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../../auth.service';
+import { SvgIconComponent } from 'angular-svg-icon';
 
 interface menu {
   name: string,
@@ -11,13 +12,13 @@ interface menu {
 
 interface menuList {
   name: string,
-  path: string,
+  path: string[],
   subMenu: menu[]
 }
 
 @Component({
   selector: 'SliderComponent',
-  imports: [NgClass, NgIf],
+  imports: [NgClass, NgIf, SvgIconComponent],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
@@ -51,11 +52,11 @@ export class SliderComponent {
   menuList: menuList[] = [
     {
       name: "首頁",
-      path: "/dash",
+      path: ["/dash", "/chat2", "/chat3"],
       subMenu: [
         {
           name: "單據點年度數據分析",
-          path: "/chat1"
+          path: "/dash"
         },
         {
           name: "集團碳排放量年度分析",
@@ -69,22 +70,35 @@ export class SliderComponent {
     },
     {
       name: "基本設定",
-      path: "/basic",
-      subMenu: []
+      path: ["/basic"],
+      subMenu: [
+        {
+          name: "集團管理設定",
+          path: "/basic"
+        },
+        {
+          name: "據點管理",
+          path: "/branch"
+        },
+        {
+          name: "盤查年度",
+          path: "/verifications"
+        }
+      ]
     },
     {
       name: "填報設定",
-      path: "/fill",
+      path: ["/fill"],
       subMenu: []
     },
     {
       name: "盤查文件",
-      path: "/doc",
+      path: ["/doc"],
       subMenu: []
     },
     {
       name: "係數管理",
-      path: "/factor",
+      path: ["/factor"],
       subMenu: []
     },
   ]
